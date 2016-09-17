@@ -11,30 +11,39 @@ class SlidingPiece < Piece
     moves = []
     directions = move_dirs
     directions.each do |dir|
+      debugger
       delta_x = dir[0]
       delta_y = dir[1]
-      while true
-        new_pos = [(pos[0] + delta_x), (pos[1] + delta_y)]
-        break unless board.in_bounds?(new_pos)
-        unless board[new_pos].is_a?(NullPiece)
-          if self.color == board[new_pos].color
-            break
-          else
-            moves << new_pos
-            break
-          end
-        end
+      moves.concat(expand_moves(delta_x, delta_y))
+    end
+    moves
+  end
+
+  private
+
+  def expand_moves(delta_x, delta_y)
+    x = delta_x
+    y = delta_y
+    moves = []
+    while true
+      new_pos = [(pos[0] + x), (pos[1] + y)]
+      break unless board.in_bounds?(new_pos)
+
+      if board[new_pos].is_a?(NullPiece)
         moves << new_pos
-        delta_x += 1
-        delta_y += 1
+      elsif self.color == board[new_pos].color
+          break
+      else
+        moves << new_pos
       end
+      x += delta_x
+      y += delta_y
+
     end
     moves
   end
 
 end
-
-
 
 
 

@@ -1,3 +1,4 @@
+require "byebug"
 require_relative "rook"
 require_relative "bishop"
 require_relative "queen"
@@ -35,6 +36,7 @@ class Board
 
     self[start_pos] = NullPiece.instance
     self[end_pos] = piece
+    piece.pos = end_pos
   end
 
   def [](pos)

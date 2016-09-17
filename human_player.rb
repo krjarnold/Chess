@@ -5,7 +5,6 @@ require 'byebug'
 class HumanPlayer < Player
 
     def make_move(board)
-      # debugger
       start_pos, end_pos = nil, nil
       until start_pos && end_pos
           if start_pos
@@ -15,9 +14,8 @@ class HumanPlayer < Player
             end_pos = display.cursor_pos
             display.selected = false
             display.reset! if end_pos
+            
           else
-
-            # @display.notifications[:message] = "#{color.capitalize}'s turn.  What piece would you like to move?"
             until display.selected
               display.move_cursor
             end
@@ -27,8 +25,6 @@ class HumanPlayer < Player
             @display.notifications[:message] = "#{color.capitalize}'s turn.  Where would you like to move to?"
           end
         end
-        # p start_pos
-        # p end_pos
         [start_pos, end_pos]
     end
 

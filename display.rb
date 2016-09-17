@@ -57,10 +57,6 @@ class Display
     end
     { background: bg, color: :light_white }
   end
-  # we want a cursor:
-  # => STDIN#getch with a mapping of keys
-  # => @cursor will remember coordinate of the cursor at all times
-  # => boolean @selected for storing whether cursor has selected piece
 
 
 end

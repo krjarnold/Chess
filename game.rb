@@ -20,7 +20,7 @@ class Game
     board.populate
     ##Counts just for testing purposes...fix this later
     count = 0
-    until count == 5
+    until count == 10
       begin
         @display.notifications[:message] = "#{current_player_color.capitalize}'s turn.  What piece would you like to move?"
         display.render
