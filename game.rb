@@ -18,9 +18,9 @@ class Game
 
   def play
     board.populate
-    ##Counts just for testing purposes...fix this later
+    ##Counts for testing purposes
     count = 0
-    until count == 10
+    until count == 1000
       begin
         @display.notifications[:message] = "#{current_player_color.capitalize}'s turn.  What piece would you like to move?"
         display.render
