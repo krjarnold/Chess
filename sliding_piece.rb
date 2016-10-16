@@ -11,7 +11,6 @@ class SlidingPiece < Piece
     moves = []
     directions = move_dirs
     directions.each do |dir|
-      debugger
       delta_x = dir[0]
       delta_y = dir[1]
       moves.concat(expand_moves(delta_x, delta_y))
