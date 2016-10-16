@@ -1,6 +1,5 @@
 require_relative 'display'
 require_relative 'player'
-require 'byebug'
 
 class HumanPlayer < Player
 
@@ -14,7 +13,7 @@ class HumanPlayer < Player
             end_pos = display.cursor_pos
             display.selected = false
             display.reset! if end_pos
-            
+
           else
             until display.selected
               display.move_cursor
