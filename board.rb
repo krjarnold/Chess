@@ -24,7 +24,6 @@ class Board
     unless end_piece.is_a?(NullPiece)
        raise "There's already a piece there!" if end_piece.color == piece.color
     end
-    # debugger
     raise "The piece can't move like that!" unless piece.valid_moves.include?(end_pos)
 
     move!(start_pos, end_pos)

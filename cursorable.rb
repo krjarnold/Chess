@@ -34,12 +34,6 @@ module Cursorable
 
   def get_input
     @key = KEYMAP[read_char]
-    # if key == :space || key == :return
-    #   display.selected = true
-    # else
-    #   display.selected = false
-    # end
-    # debugger
     handle_key(key)
   end
 
@@ -53,7 +47,6 @@ module Cursorable
       @cursor_pos
       @selected = true
     when :left, :right, :up, :down
-      # @selected = false
       update_pos(MOVES[key])
       nil
     else

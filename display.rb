@@ -55,7 +55,7 @@ class Display
     else
       bg = :light_cyan
     end
-    { background: bg, color: :light_white }
+    { background: bg, color: :black }
   end
 
 
