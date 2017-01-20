@@ -6,7 +6,7 @@ Terminal chess is a chessboard that lets play and move chess pieces right from y
 ###To play:
 
   * Download or clone the git respository to your computer
-  * If you do not have the gem "Colorize" installed, run: gem install colorize
+  * If you do not have the gem "Colorize" installed, run:ru gem install colorize
   * Navigate to the game directory
   * Run: ruby game.rb
 
