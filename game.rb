@@ -1,5 +1,5 @@
-require_relative 'board'
-require_relative 'human_player'
+require_relative 'components/board'
+require_relative 'components/human_player'
 
 
 class Game
